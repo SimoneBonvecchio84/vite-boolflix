@@ -64,8 +64,7 @@ export default {
         <div class="ms_card-back position-absolute top-0 star-0 bg-dark w-100 h-100 text-light rounded">
             <h5  class="py-2 px-2  ">{{ titleCard() }}</h5>
             <h6  class="px-2  ">{{ cardObj.title }}</h6>
-            <img class=" px-2  "  :src="flagImage(cardObj.original_language)" alt="">
-            <p class="py-1 px-2 overflow-y-auto h-25">{{ cardObj.overview }}</p>
+            <img class="py-2 px-2  "  :src="flagImage(cardObj.original_language)" alt="">
             <h5  class="py-1 px-2  d-flex flex-row">
                 <div  v-for="i in valutation">
                     <span><i class="fa-solid fa-star "></i></span>
@@ -74,6 +73,7 @@ export default {
                     <span><i class="fa-regular fa-star"></i></span>
                 </div>
             </h5>
+            <p class="py-2 px-2 overflow-y-auto h-50">{{ cardObj.overview }}</p>
         </div>
     </div>
 </template>

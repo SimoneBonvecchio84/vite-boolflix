@@ -16,7 +16,7 @@ export default {
             <h1 class="py-5">FILM</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                 <!-- in v-show dico di mostrare l elemento corrennte quando ha la chiave poster_path -->
-                <div class="col py-3" v-for="curFilm in store.arrayFilm" v-show="curFilm.poster_path">
+                <div class="col py-3" v-for="curFilm in store.arrayFilm" v-show="curFilm.poster_path" >
                        <AppCard :cardObj="curFilm" />    
                 </div>
             </div>
