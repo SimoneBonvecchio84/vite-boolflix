@@ -55,17 +55,18 @@ export default {
 </script>
 
 <template>
-    <div class="card w-100 h-100 border border-0">
-        <div class="ms_card-front position-relative w-100 h-100">
+    <div class="card w-100 h-100 border border-0 rounded bg-dark">
+        <div class="ms_card-front position-relative w-100 h-100 rounded">
             <!-- Nell card front della mia immagine richiamo la funzione imagePoster che verrà stampata dinamicamente -->
-            <img class="w-100 h-100" :src="`${imagePoster()}`" alt="">
+            <img class="w-100 h-100 rounded" :src="`${imagePoster()}`" alt="">
         </div>
 
-        <div class="ms_card-back position-absolute top-0 star-0 bg-dark w-100 h-100 text-light">
-            <h4  class="py-2 px-2  ">{{ titleCard() }}</h4>
-            <h5  class="py-2 px-2  ">{{ cardObj.title }}</h5>
-            <img class="py-2 px-2  "  :src="flagImage(cardObj.original_language)" alt="">
-            <h5  class="py-2 px-2  d-flex flex-row">
+        <div class="ms_card-back position-absolute top-0 star-0 bg-dark w-100 h-100 text-light rounded">
+            <h5  class="py-2 px-2  ">{{ titleCard() }}</h5>
+            <h6  class="px-2  ">{{ cardObj.title }}</h6>
+            <img class=" px-2  "  :src="flagImage(cardObj.original_language)" alt="">
+            <p class="py-1 px-2 overflow-y-auto h-25">{{ cardObj.overview }}</p>
+            <h5  class="py-1 px-2  d-flex flex-row">
                 <div  v-for="i in valutation">
                     <span><i class="fa-solid fa-star "></i></span>
                 </div>
@@ -85,8 +86,9 @@ export default {
 }
 .ms_card-back {
     opacity: 0;
+    transform: rotateY(180deg);
     img {
-        width: 30%;
+        width: 20%;
     }
 }
 .card:hover .ms_card-front {

@@ -12,8 +12,8 @@ export default {
 </script>
 <template>
     
-        <div class="container" v-if="store.arrayFilm.length > 0">
-            <h1>FILM</h1>
+        <div class="container py-5" v-if="store.arrayFilm.length > 0">
+            <h1 class="py-5">FILM</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                 <!-- in v-show dico di mostrare l elemento corrennte quando ha la chiave poster_path -->
                 <div class="col py-3" v-for="curFilm in store.arrayFilm" v-show="curFilm.poster_path">
@@ -24,7 +24,7 @@ export default {
    
 
     
-        <div class="container" v-if="store.arraySerie.length > 0">
+        <div class="container py-5" v-if="store.arraySerie.length > 0">
             <h1>SERIE TV</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
                  <!-- in v-show dico di mostrare l elemento corrennte quando ha la chiave poster_path -->
